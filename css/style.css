@@ -1,0 +1,148 @@
+:root {
+    --black: #000;
+    --red: #800020;
+    --write: #FFF;
+}
+
+body, h1, h2, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    padding: 0px;
+}
+
+nav, main, footer {
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+}
+
+.logo {
+    height: 10vh;
+    margin-right: 20px;
+}
+
+.nav-left, .nav-right, .search-box {
+    flex: 1;
+}
+
+.nav-left ul, .nav-right ul {
+    display: flex;
+}
+
+.nav-left ul li, .nav-right ul li {
+    margin-right: 15px;
+}
+
+.nav-btn {
+    background-color: var(--red);
+    padding:10px 20px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.nav-right {
+    justify-content: flex-end; /* 修改这里，确保整个 .nav-right 部分靠右 */
+}
+
+.nav-right ul {
+    justify-content: flex-end; /* 确保列表内容靠右 */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.search-box form {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input[type="text"] {
+    padding: 10px 10px;
+    margin-right: 5px;
+    width: 33vw;
+    min-width: 100px; /* 可根据需求调整宽度 */
+    border-radius: 5px;
+}
+
+.search-box button[type="submit"] {
+    background-color: var(--red);
+    color: #ffffff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f3f3f3;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/*matching page css*/
+
+.main-content {
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    height: calc(100vh - 50px);
+}
+.question {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 2px dashed white;
+    width: 50vw;
+}
+.options-img {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.images img {
+    width: 30%; /* 调整此值控制图片大小 */
+    border: 2px solid white;
+    cursor: grab;
+}
+.correct, .wrong {
+    font-size: 24px;
+}
+.correct {
+    color: green;
+}
+.wrong {
+    color: red;
+}
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border: none;
+}
